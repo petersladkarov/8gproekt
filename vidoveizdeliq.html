@@ -6,7 +6,7 @@
     <title>Видове изделия</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -14,7 +14,7 @@
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 1em 0;
+            padding: 0.5em 0;
         }
         nav {
             background-color: #333;
@@ -36,6 +36,26 @@
             text-align: center;
             padding: 20px;
         }
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 70px; /* увеличавам разстоянието между редовете */
+            flex-wrap: wrap;
+        }
+        .product {
+            flex: 1 1 calc(30% - 40px); /* регулирам ширината и margin */
+            margin: 20px; /* увеличавам margin за по-голямо разстояние */
+            text-align: center;
+            max-width: 300px;
+        }
+        .product img {
+            max-width: 150px;
+            height: auto;
+        }
+        .product p {
+            text-align: justify;
+            margin: 10px 0;
+        }
         footer {
             background-color: #333;
             color: white;
@@ -50,7 +70,7 @@
 <body>
 
 <header>
-    <h1>Изделия от рециклируеми материали</h1>
+    <h1>Видове изделия</h1>
 </header>
 
 <nav>
@@ -62,7 +82,37 @@
 
 <div class="container">
     <h2>Видове изделия</h2>
-    <p>Тук ще намерите информация за различните видове изделия от рециклируеми материали.</p>
+
+    <div class="row">
+        <div class="product">
+            <h3>Рециклирана хартия</h3>
+            <img src="https://example.com/recycled-paper.jpg" alt="Рециклирана хартия">
+            <p>Рециклираната хартия се използва за изработка на нови хартиени изделия като тетрадки, списания и опаковки. Процесът на рециклиране на хартия спестява дървета и енергия, и намалява отпадъците.</p>
+        </div>
+        <div class="product">
+            <h3>Пластмасови бутилки</h3>
+            <img src="https://example.com/recycled-bottles.jpg" alt="Пластмасови бутилки">
+            <p>Старите пластмасови бутилки могат да се рециклират и използват за създаване на нови бутилки, контейнери или дори текстилни влакна за дрехи. Това намалява замърсяването и нуждата от нова пластмаса.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="product">
+            <h3>Стъклени изделия</h3>
+            <img src="https://example.com/recycled-glass.jpg" alt="Стъклени изделия">
+            <p>Рециклираното стъкло може да бъде използвано за производство на нови стъклени бутилки и буркани, както и за декоративни предмети. Стъклото може да се рециклира многократно без загуба на качество.</p>
+        </div>
+        <div class="product">
+            <h3>Алуминиеви кутии</h3>
+            <img src="https://example.com/recycled-aluminum.jpg" alt="Алуминиеви кутии">
+            <p>Алуминиевите кутии могат да се рециклират безкрайно много пъти и да се използват за производство на нови кутии, фолио и други продукти. Рециклирането на алуминий спестява значително количество енергия.</p>
+        </div>
+        <div class="product">
+            <h3>Текстилни изделия</h3>
+            <img src="https://example.com/recycled-textiles.jpg" alt="Текстилни изделия">
+            <p>Текстилните отпадъци могат да се рециклират и да се използват за направата на нови дрехи, аксесоари или домашен текстил. Това намалява отпадъците и спестява ресурси като вода и енергия.</p>
+        </div>
+    </div>
 </div>
 
 <footer>
